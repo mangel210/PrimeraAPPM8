@@ -2,11 +2,10 @@ package com.example.mange.proyectom8;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.os.Bundle;
-import android.widget.Toast;
+import android.view.View;
+import android.widget.Button;
 
 
 public class Pantalla1 extends AppCompatActivity {
@@ -24,6 +23,12 @@ public class Pantalla1 extends AppCompatActivity {
                 finish();
             }
         });
-        dialogo1.show();
+        final Button button = findViewById(R.id.button_id);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                dialogo1.show();
+            }
+        });
+
     }
 }
